@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Artesanas Loma Limpia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4a7c59 0%, #6ba16a 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .team-section img, .content-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Fallback for missing logo */
+        .logo-fallback {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #4a7c59, #6ba16a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .site-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #2d5a37 0%, #1a3d24 100%);
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+            list-style: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #6ba16a, #8bc34a);
+            transform: translateX(-50%);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-menu a:hover {
+            background: #66356e;
+            transform: translateY(-3px);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(102, 53, 110, 0.4);
+        }
+
+        .nav-menu a:hover::before {
+            left: 100%;
+        }
+
+        .nav-menu a:hover::after {
+            width: 80%;
+        }
+
+        .nav-menu li:hover {
+            z-index: 10;
+        }
+
+        .hero-section {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+
+        .hero-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* Las imágenes se agregarán directamente en el HTML. */
+        /* Si deseas usar fondos de color o gradientes, puedes descomentar estas líneas */
+        /* y quitar las etiquetas <img> del HTML. */
+        /*
+        .hero-slide:nth-child(1) {
+            background: linear-gradient(45deg, #4a7c59, #6ba16a, #8bc34a);
+        }
+
+        .hero-slide:nth-child(2) {
+            background: linear-gradient(135deg, #2d5a37, #4a7c59, #5a8d68);
+        }
+
+        .hero-slide:nth-child(3) {
+            background: linear-gradient(-45deg, #6ba16a, #4a7c59, #2d5a37);
+        }
+        */
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 90, 55, 0.7);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #e8f5e8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.3);
+            }
+            to {
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,255,0.5);
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #6ba16a, #8bc34a);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(107, 161, 106, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 53, 110, 0.6);
+            background: #66356e;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .section h2 {
+            color: #2d5a37;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2:after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: #6ba16a;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .content-card h3 {
+            color: #2d5a37;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #e8f5e8, #d4f1d4);
+            border: 2px dashed #6ba16a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #2d5a37;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #4d2853, #66356e);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .stats-section h2 {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            position: relative;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .stat-item:hover::before {
+            opacity: 1;
+            animation: shimmerStat 1.5s ease-in-out;
+        }
+
+        @keyframes shimmerStat {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #c3a6c7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .stat-item.animated .stat-number {
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .activities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activities-list li {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-left: 4px solid #6ba16a;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .activities-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .team-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .social-section {
+            position: relative;
+            padding: 4rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .social-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/bg.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .social-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(74, 124, 89, 0.8), rgba(107, 161, 106, 0.6));
+            z-index: -1;
+        }
+
+        .social-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 80%; left: 80%; animation-delay: 2s; }
+        .particle:nth-child(3) { top: 40%; left: 70%; animation-delay: 4s; }
+        .particle:nth-child(4) { top: 70%; left: 30%; animation-delay: 1s; }
+        .particle:nth-child(5) { top: 30%; left: 50%; animation-delay: 3s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.7; }
+        }
+
+        .social-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .social-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .social-section h2:after {
+            background: linear-gradient(90deg, #ffffff, transparent, #ffffff);
+        }
+
+        .instagram-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instagram-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: 22px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.02); }
+        }
+
+        .instagram-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 1.5rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instagram-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .instagram-link:hover::before {
+            left: 100%;
+        }
+
+        .instagram-link:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        footer {
+            background: #4d2853;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #c3a6c7;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #8bc34a;
+        }
+
+        /* Enhanced Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header-content {
+                text-align: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .site-title {
+                font-size: 1.2rem;
+                line-height: 1.3;
+            }
+
+            .site-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+            }
+
+            .nav-menu a {
+                padding: 0.8rem 1rem;
+                font-size: 0.8rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-menu a:hover {
+                transform: none;
+                box-shadow: none;
+            }
+            
+            .hero-section {
+                padding: 4rem 0;
+                margin-bottom: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.6;
+            }
+
+            .hero-cta {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 1.5rem 0;
+                margin-bottom: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .content-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .image-placeholder {
+                height: 150px;
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+
+            .stats-section {
+                padding: 3rem 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .stat-item {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+                line-height: 1.3;
+            }
+
+            .activities-list li {
+                padding: 1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .activities-list li:hover {
+                transform: translateX(5px);
+            }
+
+            .social-section {
+                padding: 3rem 0;
+            }
+
+            .social-section h2 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .instagram-container {
+                padding: 2rem 1.5rem;
+                margin: 1.5rem auto;
+            }
+
+            .instagram-link {
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+                margin: 1.5rem 0;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-section h4 {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+
+            .social-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .instagram-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .instagram-link {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="logo.png" alt="Logo Fundación Artesanas Loma Limpia" width="80" height="80">
+                    </div>
+                    <div>
+                        <div class="site-title">Fundación Artesanas Loma Limpia</div>
+                        <div class="site-subtitle">Tejiendo comunidad, cultivando futuro en Loma de Luisa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#refuerzo-escolar">Refuerzo Escolar</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="inicio">
+        <div class="hero-carousel">
+            <div class="hero-slide active">
+                <img src="images/equipo.jpeg" alt="Equipo de la Fundación Artesanas Loma Limpia" width="1920" height="1080">
+            </div>
+            <div class="hero-slide">
+                <img src="images/luisa.jpeg" alt="Luisa Fernanda González en una actividad" width="1920" height="1080">
+            </div>
+            <div class="hero-slide">
+                <img src="logo.png" alt="Logo de la fundación" width="1920" height="1080">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tejiendo y Cultivando el Bienestar de la Comunidad</h1>
+                <p>A través del refuerzo escolar, la transformación del limón y de las eco-manualidades fortalecemos las habilidades académicas y sociales de niños, niñas, adolescentes y mujeres del campo en la Vereda Loma de Luisa</p>
+                <a href="#nosotros" class="hero-cta">Conoce Nuestra Historia</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="section" id="nosotros">
+            <h2>Nuestra Historia</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="images/vereda_800_450.jpeg" alt="Vista panorámica de la Vereda Loma de Luisa" width="800" height="450">
+                    <h3>Nuestros Orígenes</h3>
+                    <p>Desde hace 5 años surgió la iniciativa "Eco-manualidades de Loma Limpia", liderada por mujeres campesinas de la vereda Loma de Luisa, con el objetivo de reducir las brechas sociales y educativas mediante actividades de refuerzo escolar y la transformación de material reciclado en manualidades útiles para el hogar.</p>
+                </div>
+                
+                <div class="content-card">
+                    <img src="images/grupo_mujeres.jpeg" alt="Mujeres campesinas de Loma de Luisa trabajando en manualidades" width="800" height="450">
+                    <h3>Contexto y Necesidad</h3>
+                    <p>El municipio de Guamo, Tolima, presenta indicadores preocupantes de pobreza multidimensional (32.2%), analfabetismo (15.7%) y bajos logros educativos (65.1%), agravados por problemas de violencia estructural. En respuesta a esta problemática nació nuestra fundación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2 style="color: white; margin-bottom: 2rem;">Nuestro Impacto</h2>
+                <div class="stats-grid">
+                    <div class="stat-item" data-number="20">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Mujeres Campesinas Participantes</div>
+                    </div>
+                    <div class="stat-item" data-number="20">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Niños y Jóvenes en Refuerzo Escolar</div>
+                    </div>
+                    <div class="stat-item" data-number="5">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Años de Trabajo Comunitario</div>
+                    </div>
+                    <div class="stat-item" data-number="100">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">% Compromiso con la Sostenibilidad</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="actividades">
+            <h2>Nuestras Actividades</h2>
+            <img src="images/collage.jpeg" alt="Collage de actividades de la fundación" width="1200" height="400" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem;">
+            <ul class="activities-list">
+                <li>
+                    <strong>Elaboración de manualidades útiles</strong> a partir de material reciclable, promoviendo la economía circular y reduciendo el impacto ambiental.
+                </li>
+                <li>
+                    <strong>Formación y capacitación</strong> para la elaboración de manualidades, artesanías y otras actividades complementarias que fortalecen las habilidades técnicas de la comunidad.
+                </li>
+                <li>
+                    <strong>Jornadas de refuerzo escolar</strong>, formación en liderazgo y capacidades juveniles para mejorar el rendimiento académico y el desarrollo personal.
+                </li>
+                <li>
+                    <strong>Desarrollo de actividades</strong> encaminadas a fortalecer y agregar valor a los productos del campo, especialmente limón, flores, frutas y semillas.
+                </li>
+                <li>
+                    <strong>Proyectos de investigación y desarrollo</strong> basados en los principios de la economía circular para crear productos de aseo a partir de material plástico reciclado.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" id="refuerzo-escolar">
+            <h2>Refuerzo Escolar</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="images/refuerzo.jpeg" alt="Niños y jóvenes en refuerzo escolar" width="800" height="450">
+                    <h3>Metodología Educativa</h3>
+                    <p>El componente de refuerzo escolar busca fortalecer el aprendizaje de niños y jóvenes, mejorando sus competencias en lectura, escritura, matemáticas y ciencias. A través de metodologías lúdicas y participativas, promovemos el pensamiento crítico, la resolución de problemas y la creatividad.</p>
+                </div>
+                
+                <div class="content-card">
+                    <img src="images/kidslearning.jpeg" alt="Niños aprendiendo sobre medio ambiente" width="800" height="450">
+                    <h3>Enfoque Integral</h3>
+                    <p>Integramos el cuidado del medio ambiente y el uso de recursos locales en el proceso educativo. Con el apoyo de docentes, mentores y la comunidad, buscamos reducir brechas educativas y fomentar el liderazgo juvenil para una educación más equitativa e inclusiva.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section" id="equipo">
+            <div class="container">
+                <h2>Nuestro Equipo</h2>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="images/claudia.jpeg" alt="Claudia Vaca, líder académica de la fundación" width="800" height="600">
+                        <h3>Liderazgo Académico</h3>
+                        <p>Claudia Vaca, profesora de Farmacia de la Universidad Nacional, lidera junto con profesionales de diversas áreas incluyendo docentes universitarias, artistas plásticas y audiovisuales, farmacéuticas, biólogas, ingenieros agrícolas y profesionales de ciencias sociales.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="images/luisa.jpeg" alt="Luisa Fernanda González, voluntaria en la fundación" width="800" height="600">
+                        <h3>Compromiso Educativo</h3>
+                        <p>Luisa Fernanda González, profesora de un colegio público del distrito capital, complementa el equipo de profesionales comprometidos con reducir las brechas educativas y sociales, construyendo liderazgo en la comunidad rural.</p>
+                    </div>
+                </div>
+
+                <div class="content-card" style="text-align: center; margin-top: 2rem;">
+                    <img src="images/equipo.jpeg" alt="Equipo multidisciplinario de la fundación" width="800" height="600">
+                    <h3>Equipo Multidisciplinario</h3>
+                    <p>Contamos con un equipo promotor muy activo de mujeres y jóvenes profesionales de Bogotá que incluye especialistas en diversas áreas, todos unidos por el compromiso de mejorar las condiciones de vida y construir liderazgo en la comunidad rural.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Misión y Visión</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>🎯 Nuestra Misión</h3>
+                    <p>Nuestra misión es producir y comercializar productos ecológicos de alta calidad y ofrecer servicios educativos, contribuyendo al desarrollo socioeconómico de la comunidad, promoviendo la sostenibilidad y el aprendizaje entre niños y adolescentes.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3>🌟 Nuestra Visión</h3>
+                    <p>Ser reconocidos como una fundación modelo que impulsa la sostenibilidad y la educación integral en la comunidad, generando un impacto positivo, solidario y un crecimiento sostenible que transforme vidas y territorios.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section social-section" style="text-align: center;" id="contacto">
+            <div class="social-background"></div>
+            <div class="social-overlay"></div>
+            <div class="social-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="container">
+                <div class="social-content">
+                    <h2>Síguenos en Nuestras Redes</h2>
+                    <div class="instagram-container">
+                        <img src="images/instagram.jpeg" alt="Perfil de Instagram de Artesanas Loma de Luisa" width="500" height="400" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+                        <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);">Mantente conectado con nuestras actividades diarias, conoce más sobre nuestros proyectos y descubre cómo puedes ser parte de esta hermosa iniciativa comunitaria.</p>
+                        <a href="https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/?img_index=1&igsh=MXRxenU2bnJydThpMQ==" target="_blank" class="instagram-link">
+                            📸 Síguenos en Instagram @artesanaslomadeluisa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Vereda Loma de Luisa<br>
+                    Guamo, Tolima<br>
+                    Colombia<br>
+                    <a href="mailto:artesanaslomalimpia@gmail.com">artesanaslomalimpia@gmail.com</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <p>Instagram: @artesanaslomadeluisa</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Nuestra Misión</h4>
+                    <p>Fortalecer las habilidades académicas y sociales promoviendo la conciencia ambiental y la economía circular</p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #66356e; margin-top: 2rem; padding-top: 1rem;">
+                <p>&copy; 2025 Fundación Artesanas Loma Limpia. Conservamos y cuidamos nuestra vereda Loma de Luisa a través del arte hecho con nuestras manos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Hero Carousel - Fixed to work properly
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            
+            function nextSlide() {
+                if (slides.length > 0) {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+            }
+            
+            // Start carousel only if slides exist
+            if (slides.length > 0) {
+                setInterval(nextSlide, 4000); // Change every 4 seconds
+            }
+
+            // Smooth scrolling para los enlaces de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Animación de contadores en la sección de estadísticas
+            function animateCounter(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const current = Math.floor(progress * (end - start) + start);
+                    element.textContent = current + (end === 100 ? '%' : '');
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            // Observer para la sección de estadísticas - Fixed percentage animations
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        entry.target.classList.add('animated');
+                        const numberElement = entry.target.querySelector('.stat-number');
+                        const finalNumber = parseInt(entry.target.dataset.number);
+                        
+                        // Add staggered delay
+                        const delay = Array.from(document.querySelectorAll('.stat-item')).indexOf(entry.target) * 200;
+                        
+                        setTimeout(() => {
+                            animateCounter(numberElement, 0, finalNumber, 2000);
+                        }, delay);
+                    }
+                });
+            }, {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            // Observe all statistics elements
+            document.querySelectorAll('.stat-item').forEach(item => {
+                statsObserver.observe(item);
+            });
+
+            // Efecto de aparición al hacer scroll
+            const scrollObserverOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const scrollObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, scrollObserverOptions);
+
+            document.querySelectorAll('.content-card, .activities-list li').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                scrollObserver.observe(el);
+            });
+
+        });
+    </script>
+</body>
+</html>
