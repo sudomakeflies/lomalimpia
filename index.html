@@ -702,6 +702,264 @@
             color: #8bc34a;
         }
 
+        /* Eventos Section */
+        .events-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            scrollbar-width: thin;
+            scrollbar-color: #6ba16a #f8f9fa;
+        }
+
+        .events-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .events-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+
+        .events-container::-webkit-scrollbar-thumb {
+            background-color: #6ba16a;
+            border-radius: 10px;
+            border: 2px solid #f8f9fa;
+        }
+
+        .event-card {
+            flex: 0 0 320px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-info {
+            padding: 1.5rem;
+        }
+
+        .event-info h3 {
+            color: #2d5a37;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-info p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-info span {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        /* Galería Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Lightbox Modal for Gallery */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            animation: slideIn 0.3s;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        /* Modal Styles */
+        .modal-trigger {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #66356e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .modal-trigger:hover {
+            background: #4d2853;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            animation: slideIn 0.5s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .report-section {
+            margin-bottom: 2rem;
+        }
+
+        .report-section h3 {
+            color: #2d5a37;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #6ba16a;
+            padding-bottom: 0.5rem;
+        }
+
+        .report-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .report-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
         /* Enhanced Mobile Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -930,6 +1188,8 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#galeria">Manualidades</a></li>
                 <li><a href="#refuerzo-escolar">Refuerzo Escolar</a></li>
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -1038,6 +1298,166 @@
                     <p>Integramos el cuidado del medio ambiente y el uso de recursos locales en el proceso educativo. Con el apoyo de docentes, mentores y la comunidad, buscamos reducir brechas educativas y fomentar el liderazgo juvenil para una educación más equitativa e inclusiva.</p>
                 </div>
             </div>
+        
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="modal-trigger" data-modal="modal-refuerzo">Ver más detalles</button>
+            </div>
+        </section>
+
+        <section class="section" id="galeria">
+            <h2>Ecomanualidades</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto1.jpeg" alt="Cortinas con material reciclado 🏡 “Decoración sostenible que transforma espacios y cuida el planeta.”">
+                    <div class="overlay"><span>Cortinas con material reciclado 🏡 “Decoración sostenible que transforma espacios y cuida el planeta.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto2.jpeg" alt="Faroles con botellas PET. ✨ “Iluminación artesanal con conciencia ambiental.”">
+                    <div class="overlay"><span>Faroles con botellas PET. ✨ “Iluminación artesanal con conciencia ambiental.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto3.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto4.jpeg" alt="Materas con PET 🌱 “Sembramos futuro en materas hechas con materiales reciclados.”">
+                    <div class="overlay"><span>Materas con PET 🌱 “Sembramos futuro en materas hechas con materiales reciclados.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto5.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto6.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto7.jpeg" alt="Coronas con cartones de huevo. ♻️ “De material reciclado a símbolo de imaginación.”">
+                    <div class="overlay"><span>Coronas con cartones de huevo. ♻️ “De material reciclado a símbolo de imaginación.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto8.jpeg" alt="Canastas con tapas de botellas PET. 🌱 “De tapa en tapa construimos utilidad y conciencia ambiental.”">
+                    <div class="overlay"><span>Canastas con tapas de botellas PET. 🌱 “De tapa en tapa construimos utilidad y conciencia ambiental.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto9.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto10.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto11.jpeg" alt="">
+                    <div class="overlay"><span></span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto12.jpeg" alt="“Manos que transforman materiales reciclados en arte, unión y sostenibilidad.”">
+                    <div class="overlay"><span>“Manos que transforman materiales reciclados en arte, unión y sostenibilidad.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto13.jpeg" alt="“Transformando tapas en arte, llevando color y sostenibilidad a cada rincón.”">
+                    <div class="overlay"><span>“Transformando tapas en arte, llevando color y sostenibilidad a cada rincón.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto14.jpeg" alt="“Cada semilla guarda la memoria del campo y el poder de hacer nacer el mañana.”">
+                    <div class="overlay"><span>“Cada semilla guarda la memoria del campo y el poder de hacer nacer el mañana.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto15.jpeg" alt="Flores con tubos de cartón 🎨 “Flores sostenibles que decoran con conciencia ambiental.”">
+                    <div class="overlay"><span>Flores con tubos de cartón 🎨 “Flores sostenibles que decoran con conciencia ambiental.”</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ecomanualidades/foto16.jpeg" alt="“Mujeres que se unen para transformar su comunidad con creatividad y sostenibilidad.”">
+                    <div class="overlay"><span>“Mujeres que se unen para transformar su comunidad con creatividad y sostenibilidad.”</span></div>
+                </div>
+            </div>
+        
+            <div style="text-align: center; margin-top: 1rem;">
+                <button class="modal-trigger" data-modal="modal-ecomanualidades">Catalogo</button>
+            </div>
+        </section>
+
+        <section class="section" id="eventos">
+            <h2>Participación en Eventos</h2>
+            <div class="events-container">
+
+                <div class="event-card">
+                    <img src="images/eventos/foto5.jpeg" alt="Caracterización de la Población de Economías Populares.">
+                    <div class="event-info">
+                        <h3>Caracterización de la Población de Economías Populares.</h3>
+                        <p>Servicio Nacional de Aprendizaje SENA. En la foto Elvira Gonzalez</p>
+                        <span>Agosto de 2025</span>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="images/eventos/foto3.jpeg" alt="Feria en el hospital los Cobos">
+                    <div class="event-info">
+                        <h3>Feria en el hospital los Cobos</h3>
+                        <p>Un espacio para compartir experiencias y fortalecer la red de mujeres artesanas. En la foto Diana Vacca.</p>
+                        <span>15 de Agosto de 2025</span>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="images/eventos/foto7.jpeg" alt="Corpus Christi">
+                    <div class="event-info">
+                        <h3>Corpus Christi</h3>
+                        <p>Fiestas folclóricas en Guamo Tolima. En la foto Rosa Gonzalez y Deisy Olaya.</p>
+                        <span>Junio de 2025</span>
+                    </div>
+                </div>  
+
+                
+
+                <div class="event-card">
+                    <img src="images/eventos/foto2.jpeg" alt="Feria Takeda">
+                    <div class="event-info">
+                        <h3>Feria Takeda</h3>
+                        <p>Feria en el laboratorio farmacéutico Takeda. En la foto Diana Vacca</p>
+                        <span>7 de marzo de 2025</span>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="images/eventos/foto1.jpeg" alt="Feria de Emprendimiento Local">
+                    <div class="event-info">
+                        <h3>Festival Macarenazo</h3>
+                        <p>En la foto Claudia Vacca y Luisa Gonzalez.</p>
+                        <span>Septiembre del 2024</span>
+                    </div>
+                </div>
+                
+                 <div class="event-card">
+                    <img src="images/eventos/foto4.jpeg" alt="Feria de fendesa">
+                    <div class="event-info">
+                        <h3>Feria de Fendesa</h3>
+                        <p>En la foto Luna Catalina Vacca</p>
+                        <span>Noviembre de 2024</span>
+                    </div>
+                </div>
+
+                
+                <div class="event-card">
+                    <img src="images/eventos/foto6.jpeg" alt="Diplomado Universidad Javeriana">
+                    <div class="event-info">
+                        <h3>Diplomado Universidad Javeriana</h3>
+                        <p>Curso: Herramientas para el diseño y evaluación de proyectos asociativos. En la foto Claudia Vacca y Maria Prada.</p>
+                        <span>Julio de 2024</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="images/eventos/foto8.jpeg" alt="Encuantro con Alemanes">
+                    <div class="event-info">
+                        <h3>Encuentro con Alemanes</h3>
+                        <p>En la foto Juan Jairo Vacca y académicos alemanes.</p>
+                        <span>Junio 2024</span>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <section class="section team-section" id="equipo">
@@ -1104,6 +1524,137 @@
             </div>
         </section>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-refuerzo" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Historia de Refuerzos Escolares</h2>
+            
+            <div class="report-section">
+                <h3>Instrumentos con materiales reciclados 🎶 “Transformamos materiales en música y aprendizaje.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto1.jpeg" alt="Instrumentos con materiales reciclados">
+                    <img src="images/refuerzo/foto2.jpeg" alt="Instrumentos con materiales reciclados">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Canastas de Halloween con PET 🎃 “Creatividad y reciclaje para celebrar en comunidad.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto3.jpeg" alt="Canastas de Halloween con PET">
+                    <img src="images/refuerzo/foto4.jpeg" alt="Canastas de Halloween con PET">
+                    <img src="images/refuerzo/foto5.jpeg" alt="Canastas de Halloween con PET">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Cine a la loma - 9 de diciembre de 2023</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto6.jpeg" alt="Cine a la loma">
+                    <img src="images/refuerzo/foto7.jpeg" alt="Cine a la loma">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Cine a la loma - 29 de julio de 2023</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto8.jpeg" alt="Cine a la loma">
+                    <img src="images/refuerzo/foto9.jpeg" alt="Cine a la loma">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Festival de Cine – Bogotá 2023 🎬 “Nuestros jóvenes presentes en el Festival de cine infancia y adolescencia”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto10.jpeg" alt="Festival de Cine – Bogotá 2023">
+                    <img src="images/refuerzo/foto11.jpeg" alt="Festival de Cine – Bogotá 2023">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Cine Día de la Madre 🌸 “Un espacio cultural para rendir homenaje a las madres.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto12.jpeg" alt="Cine Día de la Madre">
+                    <img src="images/refuerzo/foto13.jpeg" alt="Cine Día de la Madre">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Herbario medicinal 🌿 “Rescatamos la memoria de las plantas de nuestra región.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto14.jpeg" alt="Herbario medicinal">
+                    <img src="images/refuerzo/foto15.jpeg" alt="Herbario medicinal">
+                    <img src="images/refuerzo/foto16.jpeg" alt="Herbario medicinal">
+                    <img src="images/refuerzo/foto17.jpeg" alt="Herbario medicinal">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Materas con PET 🌱 “Reciclaje que se convierte en vida y sostenibilidad.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto18.jpeg" alt="Materas con PET">
+                    <img src="images/refuerzo/foto19.jpeg" alt="Materas con PET">
+                    <img src="images/refuerzo/foto20.jpeg" alt="Materas con PET">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Propiedades del limón 🍋 “Exploramos el potencial educativo y productivo del limón.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto21.jpeg" alt="Propiedades del limón">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Regletas de Cuisenaire ➗ “Matemáticas prácticas para desarrollar el pensamiento lógico.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto22.jpeg" alt="Regletas de Cuisenaire">
+                    <img src="images/refuerzo/foto23.jpeg" alt="Regletas de Cuisenaire">
+                    <img src="images/refuerzo/foto24.jpeg" alt="Regletas de Cuisenaire">
+                    <img src="images/refuerzo/foto25.jpeg" alt="Regletas de Cuisenaire">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Método VaCaChaDaFa 📖 “Un método innovador para fortalecer la lectoescritura.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto26.jpeg" alt="Método VaCaChaDaFa">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Cometas recicladas 🪁 “El juego como motor de aprendizaje y conciencia ambiental.”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto27.jpeg" alt="Cometas recicladas">
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3>Festival de Cine infancia y adolescencia – 2025 ✨ “Seguimos construyendo experiencias culturales significativas en nuestros niños y jóvenes .”</h3>
+                <div class="report-images">
+                    <img src="images/refuerzo/foto28.jpeg" alt="Festival de Cine infancia y adolescencia – 2025">
+                    <img src="images/refuerzo/foto29.jpeg" alt="Festival de Cine infancia y adolescencia – 2025">
+                    <img src="images/refuerzo/foto30.jpeg" alt="Festival de Cine infancia y adolescencia – 2025">
+                    <img src="images/refuerzo/foto31.jpeg" alt="Festival de Cine infancia y adolescencia – 2025">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-ecomanualidades" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Catálogo de Ecomanualidades</h2>
+            <embed src="pdf/postales.pdf" type="application/pdf" width="100%" height="600px" />
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -1229,6 +1780,57 @@
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 scrollObserver.observe(el);
+            });
+
+            // Modal functionality
+            const modalTriggers = document.querySelectorAll('.modal-trigger');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.close-button');
+
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const modalId = trigger.getAttribute('data-modal');
+                    document.getElementById(modalId).style.display = 'block';
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.modal').style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', (event) => {
+                modals.forEach(modal => {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            // Gallery Lightbox functionality
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').src;
+                    lightboxImg.src = imgSrc;
+                    lightbox.style.display = 'flex';
+                });
+            });
+
+            function closeLightbox() {
+                lightbox.style.display = 'none';
+            }
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
             });
 
         });
