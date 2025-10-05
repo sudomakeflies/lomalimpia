@@ -1,0 +1,16 @@
+{
+  "name": "image-optimizer",
+  "version": "1.0.0",
+  "description": "Optimizador de imágenes para sitios estáticos",
+  "main": "optimize-images.js",
+  "scripts": {
+    "optimize": "node optimize-images.js",
+    "build": "npm run optimize"
+  },
+  "keywords": ["image", "optimization", "netlify"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}

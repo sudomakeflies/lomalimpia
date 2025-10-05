@@ -1,0 +1,1106 @@
+<!-- SNIPPETS HTML GENERADOS -->
+
+<!-- _collage.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/_collage-400w.webp 400w,
+          images-optimized/_collage-800w.webp 800w,
+          images-optimized/_collage-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/_collage-400w.jpeg 400w,
+          images-optimized/_collage-800w.jpeg 800w,
+          images-optimized/_collage-1200w.jpeg 1200w">
+  <img src="images-optimized/_collage-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- _equipo.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/_equipo-400w.webp 400w,
+          images-optimized/_equipo-800w.webp 800w,
+          images-optimized/_equipo-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/_equipo-400w.jpeg 400w,
+          images-optimized/_equipo-800w.jpeg 800w,
+          images-optimized/_equipo-1200w.jpeg 1200w">
+  <img src="images-optimized/_equipo-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- _luisa.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/_luisa-400w.webp 400w,
+          images-optimized/_luisa-800w.webp 800w,
+          images-optimized/_luisa-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/_luisa-400w.jpeg 400w,
+          images-optimized/_luisa-800w.jpeg 800w,
+          images-optimized/_luisa-1200w.jpeg 1200w">
+  <img src="images-optimized/_luisa-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- bg.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/bg-400w.webp 400w,
+          images-optimized/bg-800w.webp 800w,
+          images-optimized/bg-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/bg-400w.jpeg 400w,
+          images-optimized/bg-800w.jpeg 800w,
+          images-optimized/bg-1200w.jpeg 1200w">
+  <img src="images-optimized/bg-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- claudia.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/claudia-400w.webp 400w,
+          images-optimized/claudia-800w.webp 800w,
+          images-optimized/claudia-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/claudia-400w.jpeg 400w,
+          images-optimized/claudia-800w.jpeg 800w,
+          images-optimized/claudia-1200w.jpeg 1200w">
+  <img src="images-optimized/claudia-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- collage.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/collage-400w.webp 400w,
+          images-optimized/collage-800w.webp 800w,
+          images-optimized/collage-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/collage-400w.jpeg 400w,
+          images-optimized/collage-800w.jpeg 800w,
+          images-optimized/collage-1200w.jpeg 1200w">
+  <img src="images-optimized/collage-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto1.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto1-400w.webp 400w,
+          images-optimized/ecomanualidades/foto1-800w.webp 800w,
+          images-optimized/ecomanualidades/foto1-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto1-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto1-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto1-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto1-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto10.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto10-400w.webp 400w,
+          images-optimized/ecomanualidades/foto10-800w.webp 800w,
+          images-optimized/ecomanualidades/foto10-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto10-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto10-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto10-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto10-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto11.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto11-400w.webp 400w,
+          images-optimized/ecomanualidades/foto11-800w.webp 800w,
+          images-optimized/ecomanualidades/foto11-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto11-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto11-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto11-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto11-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto12.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto12-400w.webp 400w,
+          images-optimized/ecomanualidades/foto12-800w.webp 800w,
+          images-optimized/ecomanualidades/foto12-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto12-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto12-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto12-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto12-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto13.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto13-400w.webp 400w,
+          images-optimized/ecomanualidades/foto13-800w.webp 800w,
+          images-optimized/ecomanualidades/foto13-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto13-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto13-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto13-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto13-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto14.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto14-400w.webp 400w,
+          images-optimized/ecomanualidades/foto14-800w.webp 800w,
+          images-optimized/ecomanualidades/foto14-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto14-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto14-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto14-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto14-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto15.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto15-400w.webp 400w,
+          images-optimized/ecomanualidades/foto15-800w.webp 800w,
+          images-optimized/ecomanualidades/foto15-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto15-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto15-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto15-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto15-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto16.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto16-400w.webp 400w,
+          images-optimized/ecomanualidades/foto16-800w.webp 800w,
+          images-optimized/ecomanualidades/foto16-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto16-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto16-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto16-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto16-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto2.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto2-400w.webp 400w,
+          images-optimized/ecomanualidades/foto2-800w.webp 800w,
+          images-optimized/ecomanualidades/foto2-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto2-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto2-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto2-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto2-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto3.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto3-400w.webp 400w,
+          images-optimized/ecomanualidades/foto3-800w.webp 800w,
+          images-optimized/ecomanualidades/foto3-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto3-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto3-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto3-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto3-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto4.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto4-400w.webp 400w,
+          images-optimized/ecomanualidades/foto4-800w.webp 800w,
+          images-optimized/ecomanualidades/foto4-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto4-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto4-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto4-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto4-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto5.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto5-400w.webp 400w,
+          images-optimized/ecomanualidades/foto5-800w.webp 800w,
+          images-optimized/ecomanualidades/foto5-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto5-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto5-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto5-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto5-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto6.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto6-400w.webp 400w,
+          images-optimized/ecomanualidades/foto6-800w.webp 800w,
+          images-optimized/ecomanualidades/foto6-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto6-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto6-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto6-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto6-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto7.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto7-400w.webp 400w,
+          images-optimized/ecomanualidades/foto7-800w.webp 800w,
+          images-optimized/ecomanualidades/foto7-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto7-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto7-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto7-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto7-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto8.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto8-400w.webp 400w,
+          images-optimized/ecomanualidades/foto8-800w.webp 800w,
+          images-optimized/ecomanualidades/foto8-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto8-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto8-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto8-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto8-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- ecomanualidades/foto9.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/ecomanualidades/foto9-400w.webp 400w,
+          images-optimized/ecomanualidades/foto9-800w.webp 800w,
+          images-optimized/ecomanualidades/foto9-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/ecomanualidades/foto9-400w.jpeg 400w,
+          images-optimized/ecomanualidades/foto9-800w.jpeg 800w,
+          images-optimized/ecomanualidades/foto9-1200w.jpeg 1200w">
+  <img src="images-optimized/ecomanualidades/foto9-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- equipo.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/equipo-400w.webp 400w,
+          images-optimized/equipo-800w.webp 800w,
+          images-optimized/equipo-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/equipo-400w.jpeg 400w,
+          images-optimized/equipo-800w.jpeg 800w,
+          images-optimized/equipo-1200w.jpeg 1200w">
+  <img src="images-optimized/equipo-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto1.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto1-400w.webp 400w,
+          images-optimized/eventos/foto1-800w.webp 800w,
+          images-optimized/eventos/foto1-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto1-400w.jpeg 400w,
+          images-optimized/eventos/foto1-800w.jpeg 800w,
+          images-optimized/eventos/foto1-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto1-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto2.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto2-400w.webp 400w,
+          images-optimized/eventos/foto2-800w.webp 800w,
+          images-optimized/eventos/foto2-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto2-400w.jpeg 400w,
+          images-optimized/eventos/foto2-800w.jpeg 800w,
+          images-optimized/eventos/foto2-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto2-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto3.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto3-400w.webp 400w,
+          images-optimized/eventos/foto3-800w.webp 800w,
+          images-optimized/eventos/foto3-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto3-400w.jpeg 400w,
+          images-optimized/eventos/foto3-800w.jpeg 800w,
+          images-optimized/eventos/foto3-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto3-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto4.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto4-400w.webp 400w,
+          images-optimized/eventos/foto4-800w.webp 800w,
+          images-optimized/eventos/foto4-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto4-400w.jpeg 400w,
+          images-optimized/eventos/foto4-800w.jpeg 800w,
+          images-optimized/eventos/foto4-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto4-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto5.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto5-400w.webp 400w,
+          images-optimized/eventos/foto5-800w.webp 800w,
+          images-optimized/eventos/foto5-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto5-400w.jpeg 400w,
+          images-optimized/eventos/foto5-800w.jpeg 800w,
+          images-optimized/eventos/foto5-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto5-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto6.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto6-400w.webp 400w,
+          images-optimized/eventos/foto6-800w.webp 800w,
+          images-optimized/eventos/foto6-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto6-400w.jpeg 400w,
+          images-optimized/eventos/foto6-800w.jpeg 800w,
+          images-optimized/eventos/foto6-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto6-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto7.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto7-400w.webp 400w,
+          images-optimized/eventos/foto7-800w.webp 800w,
+          images-optimized/eventos/foto7-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto7-400w.jpeg 400w,
+          images-optimized/eventos/foto7-800w.jpeg 800w,
+          images-optimized/eventos/foto7-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto7-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- eventos/foto8.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/eventos/foto8-400w.webp 400w,
+          images-optimized/eventos/foto8-800w.webp 800w,
+          images-optimized/eventos/foto8-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/eventos/foto8-400w.jpeg 400w,
+          images-optimized/eventos/foto8-800w.jpeg 800w,
+          images-optimized/eventos/foto8-1200w.jpeg 1200w">
+  <img src="images-optimized/eventos/foto8-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- grupo_mujeres.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/grupo_mujeres-400w.webp 400w,
+          images-optimized/grupo_mujeres-800w.webp 800w,
+          images-optimized/grupo_mujeres-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/grupo_mujeres-400w.jpeg 400w,
+          images-optimized/grupo_mujeres-800w.jpeg 800w,
+          images-optimized/grupo_mujeres-1200w.jpeg 1200w">
+  <img src="images-optimized/grupo_mujeres-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- instagram.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/instagram-400w.webp 400w,
+          images-optimized/instagram-800w.webp 800w,
+          images-optimized/instagram-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/instagram-400w.jpeg 400w,
+          images-optimized/instagram-800w.jpeg 800w,
+          images-optimized/instagram-1200w.jpeg 1200w">
+  <img src="images-optimized/instagram-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- kidslearning.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/kidslearning-400w.webp 400w,
+          images-optimized/kidslearning-800w.webp 800w,
+          images-optimized/kidslearning-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/kidslearning-400w.jpeg 400w,
+          images-optimized/kidslearning-800w.jpeg 800w,
+          images-optimized/kidslearning-1200w.jpeg 1200w">
+  <img src="images-optimized/kidslearning-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- luisa.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/luisa-400w.webp 400w,
+          images-optimized/luisa-800w.webp 800w,
+          images-optimized/luisa-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/luisa-400w.jpeg 400w,
+          images-optimized/luisa-800w.jpeg 800w,
+          images-optimized/luisa-1200w.jpeg 1200w">
+  <img src="images-optimized/luisa-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto1.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto1-400w.webp 400w,
+          images-optimized/refuerzo/foto1-800w.webp 800w,
+          images-optimized/refuerzo/foto1-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto1-400w.jpeg 400w,
+          images-optimized/refuerzo/foto1-800w.jpeg 800w,
+          images-optimized/refuerzo/foto1-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto1-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto10.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto10-400w.webp 400w,
+          images-optimized/refuerzo/foto10-800w.webp 800w,
+          images-optimized/refuerzo/foto10-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto10-400w.jpeg 400w,
+          images-optimized/refuerzo/foto10-800w.jpeg 800w,
+          images-optimized/refuerzo/foto10-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto10-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto11.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto11-400w.webp 400w,
+          images-optimized/refuerzo/foto11-800w.webp 800w,
+          images-optimized/refuerzo/foto11-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto11-400w.jpeg 400w,
+          images-optimized/refuerzo/foto11-800w.jpeg 800w,
+          images-optimized/refuerzo/foto11-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto11-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto12.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto12-400w.webp 400w,
+          images-optimized/refuerzo/foto12-800w.webp 800w,
+          images-optimized/refuerzo/foto12-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto12-400w.jpeg 400w,
+          images-optimized/refuerzo/foto12-800w.jpeg 800w,
+          images-optimized/refuerzo/foto12-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto12-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto13.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto13-400w.webp 400w,
+          images-optimized/refuerzo/foto13-800w.webp 800w,
+          images-optimized/refuerzo/foto13-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto13-400w.jpeg 400w,
+          images-optimized/refuerzo/foto13-800w.jpeg 800w,
+          images-optimized/refuerzo/foto13-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto13-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto14.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto14-400w.webp 400w,
+          images-optimized/refuerzo/foto14-800w.webp 800w,
+          images-optimized/refuerzo/foto14-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto14-400w.jpeg 400w,
+          images-optimized/refuerzo/foto14-800w.jpeg 800w,
+          images-optimized/refuerzo/foto14-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto14-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto15.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto15-400w.webp 400w,
+          images-optimized/refuerzo/foto15-800w.webp 800w,
+          images-optimized/refuerzo/foto15-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto15-400w.jpeg 400w,
+          images-optimized/refuerzo/foto15-800w.jpeg 800w,
+          images-optimized/refuerzo/foto15-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto15-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto16.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto16-400w.webp 400w,
+          images-optimized/refuerzo/foto16-800w.webp 800w,
+          images-optimized/refuerzo/foto16-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto16-400w.jpeg 400w,
+          images-optimized/refuerzo/foto16-800w.jpeg 800w,
+          images-optimized/refuerzo/foto16-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto16-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto17.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto17-400w.webp 400w,
+          images-optimized/refuerzo/foto17-800w.webp 800w,
+          images-optimized/refuerzo/foto17-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto17-400w.jpeg 400w,
+          images-optimized/refuerzo/foto17-800w.jpeg 800w,
+          images-optimized/refuerzo/foto17-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto17-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto18.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto18-400w.webp 400w,
+          images-optimized/refuerzo/foto18-800w.webp 800w,
+          images-optimized/refuerzo/foto18-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto18-400w.jpeg 400w,
+          images-optimized/refuerzo/foto18-800w.jpeg 800w,
+          images-optimized/refuerzo/foto18-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto18-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto19.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto19-400w.webp 400w,
+          images-optimized/refuerzo/foto19-800w.webp 800w,
+          images-optimized/refuerzo/foto19-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto19-400w.jpeg 400w,
+          images-optimized/refuerzo/foto19-800w.jpeg 800w,
+          images-optimized/refuerzo/foto19-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto19-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto2.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto2-400w.webp 400w,
+          images-optimized/refuerzo/foto2-800w.webp 800w,
+          images-optimized/refuerzo/foto2-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto2-400w.jpeg 400w,
+          images-optimized/refuerzo/foto2-800w.jpeg 800w,
+          images-optimized/refuerzo/foto2-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto2-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto20.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto20-400w.webp 400w,
+          images-optimized/refuerzo/foto20-800w.webp 800w,
+          images-optimized/refuerzo/foto20-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto20-400w.jpeg 400w,
+          images-optimized/refuerzo/foto20-800w.jpeg 800w,
+          images-optimized/refuerzo/foto20-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto20-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto21.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto21-400w.webp 400w,
+          images-optimized/refuerzo/foto21-800w.webp 800w,
+          images-optimized/refuerzo/foto21-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto21-400w.jpeg 400w,
+          images-optimized/refuerzo/foto21-800w.jpeg 800w,
+          images-optimized/refuerzo/foto21-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto21-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto22.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto22-400w.webp 400w,
+          images-optimized/refuerzo/foto22-800w.webp 800w,
+          images-optimized/refuerzo/foto22-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto22-400w.jpeg 400w,
+          images-optimized/refuerzo/foto22-800w.jpeg 800w,
+          images-optimized/refuerzo/foto22-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto22-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto23.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto23-400w.webp 400w,
+          images-optimized/refuerzo/foto23-800w.webp 800w,
+          images-optimized/refuerzo/foto23-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto23-400w.jpeg 400w,
+          images-optimized/refuerzo/foto23-800w.jpeg 800w,
+          images-optimized/refuerzo/foto23-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto23-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto24.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto24-400w.webp 400w,
+          images-optimized/refuerzo/foto24-800w.webp 800w,
+          images-optimized/refuerzo/foto24-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto24-400w.jpeg 400w,
+          images-optimized/refuerzo/foto24-800w.jpeg 800w,
+          images-optimized/refuerzo/foto24-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto24-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto25.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto25-400w.webp 400w,
+          images-optimized/refuerzo/foto25-800w.webp 800w,
+          images-optimized/refuerzo/foto25-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto25-400w.jpeg 400w,
+          images-optimized/refuerzo/foto25-800w.jpeg 800w,
+          images-optimized/refuerzo/foto25-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto25-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto26.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto26-400w.webp 400w,
+          images-optimized/refuerzo/foto26-800w.webp 800w,
+          images-optimized/refuerzo/foto26-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto26-400w.jpeg 400w,
+          images-optimized/refuerzo/foto26-800w.jpeg 800w,
+          images-optimized/refuerzo/foto26-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto26-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto27.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto27-400w.webp 400w,
+          images-optimized/refuerzo/foto27-800w.webp 800w,
+          images-optimized/refuerzo/foto27-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto27-400w.jpeg 400w,
+          images-optimized/refuerzo/foto27-800w.jpeg 800w,
+          images-optimized/refuerzo/foto27-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto27-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto28.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto28-400w.webp 400w,
+          images-optimized/refuerzo/foto28-800w.webp 800w,
+          images-optimized/refuerzo/foto28-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto28-400w.jpeg 400w,
+          images-optimized/refuerzo/foto28-800w.jpeg 800w,
+          images-optimized/refuerzo/foto28-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto28-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto29.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto29-400w.webp 400w,
+          images-optimized/refuerzo/foto29-800w.webp 800w,
+          images-optimized/refuerzo/foto29-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto29-400w.jpeg 400w,
+          images-optimized/refuerzo/foto29-800w.jpeg 800w,
+          images-optimized/refuerzo/foto29-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto29-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto3.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto3-400w.webp 400w,
+          images-optimized/refuerzo/foto3-800w.webp 800w,
+          images-optimized/refuerzo/foto3-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto3-400w.jpeg 400w,
+          images-optimized/refuerzo/foto3-800w.jpeg 800w,
+          images-optimized/refuerzo/foto3-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto3-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto30.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto30-400w.webp 400w,
+          images-optimized/refuerzo/foto30-800w.webp 800w,
+          images-optimized/refuerzo/foto30-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto30-400w.jpeg 400w,
+          images-optimized/refuerzo/foto30-800w.jpeg 800w,
+          images-optimized/refuerzo/foto30-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto30-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto31.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto31-400w.webp 400w,
+          images-optimized/refuerzo/foto31-800w.webp 800w,
+          images-optimized/refuerzo/foto31-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto31-400w.jpeg 400w,
+          images-optimized/refuerzo/foto31-800w.jpeg 800w,
+          images-optimized/refuerzo/foto31-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto31-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto4.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto4-400w.webp 400w,
+          images-optimized/refuerzo/foto4-800w.webp 800w,
+          images-optimized/refuerzo/foto4-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto4-400w.jpeg 400w,
+          images-optimized/refuerzo/foto4-800w.jpeg 800w,
+          images-optimized/refuerzo/foto4-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto4-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto5.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto5-400w.webp 400w,
+          images-optimized/refuerzo/foto5-800w.webp 800w,
+          images-optimized/refuerzo/foto5-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto5-400w.jpeg 400w,
+          images-optimized/refuerzo/foto5-800w.jpeg 800w,
+          images-optimized/refuerzo/foto5-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto5-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto6.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto6-400w.webp 400w,
+          images-optimized/refuerzo/foto6-800w.webp 800w,
+          images-optimized/refuerzo/foto6-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto6-400w.jpeg 400w,
+          images-optimized/refuerzo/foto6-800w.jpeg 800w,
+          images-optimized/refuerzo/foto6-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto6-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto7.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto7-400w.webp 400w,
+          images-optimized/refuerzo/foto7-800w.webp 800w,
+          images-optimized/refuerzo/foto7-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto7-400w.jpeg 400w,
+          images-optimized/refuerzo/foto7-800w.jpeg 800w,
+          images-optimized/refuerzo/foto7-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto7-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto8.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto8-400w.webp 400w,
+          images-optimized/refuerzo/foto8-800w.webp 800w,
+          images-optimized/refuerzo/foto8-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto8-400w.jpeg 400w,
+          images-optimized/refuerzo/foto8-800w.jpeg 800w,
+          images-optimized/refuerzo/foto8-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto8-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo/foto9.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo/foto9-400w.webp 400w,
+          images-optimized/refuerzo/foto9-800w.webp 800w,
+          images-optimized/refuerzo/foto9-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo/foto9-400w.jpeg 400w,
+          images-optimized/refuerzo/foto9-800w.jpeg 800w,
+          images-optimized/refuerzo/foto9-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo/foto9-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- refuerzo.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/refuerzo-400w.webp 400w,
+          images-optimized/refuerzo-800w.webp 800w,
+          images-optimized/refuerzo-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/refuerzo-400w.jpeg 400w,
+          images-optimized/refuerzo-800w.jpeg 800w,
+          images-optimized/refuerzo-1200w.jpeg 1200w">
+  <img src="images-optimized/refuerzo-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- vereda.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/vereda-400w.webp 400w,
+          images-optimized/vereda-800w.webp 800w,
+          images-optimized/vereda-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/vereda-400w.jpeg 400w,
+          images-optimized/vereda-800w.jpeg 800w,
+          images-optimized/vereda-1200w.jpeg 1200w">
+  <img src="images-optimized/vereda-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
+<!-- vereda_800_450.jpeg -->
+<picture>
+  <source type="image/webp"
+          srcset="images-optimized/vereda_800_450-400w.webp 400w,
+          images-optimized/vereda_800_450-800w.webp 800w,
+          images-optimized/vereda_800_450-1200w.webp 1200w">
+  <source type="image/jpeg"
+          srcset="images-optimized/vereda_800_450-400w.jpeg 400w,
+          images-optimized/vereda_800_450-800w.jpeg 800w,
+          images-optimized/vereda_800_450-1200w.jpeg 1200w">
+  <img src="images-optimized/vereda_800_450-800w.jpeg"
+       alt="Descripción de la imagen"
+       loading="lazy"
+       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
+</picture>
+
