@@ -1,0 +1,32 @@
+# Crear el archivo .gitignore
+touch .gitignore
+
+# Agregar las siguientes líneas al archivo .gitignore
+cat > .gitignore << EOF
+# Archivos del sistema macOS
+.DS_Store
+.DS_Store?
+._.DS_Store
+*.DS_Store
+
+# Directorios de respaldo
+*.backup
+*.bak
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Archivos de configuración local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Directorios de dependencias
+node_modules/
+vendor/
+EOF
