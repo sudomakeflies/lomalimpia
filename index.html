@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación Artesanas Loma Limpia</title>
+    <title>Fundación Artesanas Loma Limpia - Transformando Comunidades Rurales</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fundación Artesanas Loma Limpia - Transformamos comunidades rurales a través de refuerzo escolar, eco-manualidades y desarrollo sostenible en la Vereda Loma de Luisa. Únete a nuestra misión de educación y sostenibilidad.">
+    <meta name="keywords" content="fundación, artesanas, loma limpia, refuerzo escolar, eco-manualidades, sostenibilidad, comunidad rural, educación, vereda loma de luisa, desarrollo social">
+    <meta name="author" content="Fundación Artesanas Loma Limpia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fundacionartesanaslomalimpia.org">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fundacionartesanaslomalimpia.org">
+    <meta property="og:title" content="Fundación Artesanas Loma Limpia - Transformando Comunidades Rurales">
+    <meta property="og:description" content="Tejiendo y cultivando el bienestar de la comunidad a través de educación, sostenibilidad y desarrollo social en la Vereda Loma de Luisa">
+    <meta property="og:image" content="https://fundacionartesanaslomalimpia.org/logo.webp">
+    <meta property="og:site_name" content="Fundación Artesanas Loma Limpia">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fundacionartesanaslomalimpia.org">
+    <meta property="twitter:title" content="Fundación Artesanas Loma Limpia - Transformando Comunidades Rurales">
+    <meta property="twitter:description" content="Tejiendo y cultivando el bienestar de la comunidad a través de educación, sostenibilidad y desarrollo social">
+    <meta property="twitter:image" content="https://fundacionartesanaslomalimpia.org/logo.webp">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="logo.webp" as="image">
+    <link rel="preload" href="images-optimized/equipo-800w.webp" as="image">
+    <link rel="preload" href="images-optimized/bg-1200w.webp" as="image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <link rel="apple-touch-icon" href="logo.webp">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -97,6 +131,37 @@
         }
 
         .loading-wrapper .spinner.hidden {
+            opacity: 0;
+        }
+
+        /* PDF Loading Spinner */
+        .pdf-loading-container {
+            position: relative;
+            width: 100%;
+            height: 600px; /* Match embed height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Placeholder background */
+        }
+
+        .pdf-loading-container .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* Slightly larger spinner for PDF */
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top-color: #6ba16a;
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .pdf-loading-container .spinner.hidden {
             opacity: 0;
         }
 
@@ -566,9 +631,15 @@
 
         .social-section {
             position: relative;
-            padding: 4rem 0;
+            padding: 6rem 0;
             text-align: center;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
         }
 
         .social-background {
@@ -577,11 +648,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('images/bg.jpeg');
-            background-attachment: fixed;
+            background-image: url('images-optimized/bg-1200w.webp'), url('images-optimized/bg-1200w.jpeg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             z-index: -2;
+            opacity: 0.4;
         }
 
         .social-overlay {
@@ -591,9 +663,9 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                linear-gradient(45deg, rgba(74, 124, 89, 0.8), rgba(107, 161, 106, 0.6));
+                radial-gradient(circle at 20% 80%, rgba(45, 90, 55, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(107, 161, 106, 0.3) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(45, 90, 55, 0.7), rgba(74, 124, 89, 0.6));
             z-index: -1;
         }
 
@@ -644,15 +716,18 @@
         }
 
         .instagram-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 3rem;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 600px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            max-width: 800px;
             margin: 2rem auto;
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
         .instagram-container::before {
@@ -709,6 +784,337 @@
         .instagram-link:hover {
             transform: translateY(-8px) scale(1.05);
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6ba16a, #4a7c59);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(107, 161, 106, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(107, 161, 106, 0.5);
+        }
+
+        .back-to-top:active {
+            transform: translateY(-1px);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .breadcrumbs nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumbs ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .breadcrumbs li {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumbs li:not(:last-child)::after {
+            content: '›';
+            margin: 0 0.5rem;
+            color: #6ba16a;
+            font-weight: bold;
+        }
+
+        .breadcrumbs a {
+            color: #6ba16a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumbs a:hover {
+            color: #4a7c59;
+            text-decoration: underline;
+        }
+
+        .breadcrumbs .current {
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Contact Form Styles */
+        .contact-form-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2d5a37;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #6ba16a;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #6ba16a, #4a7c59);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(107, 161, 106, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #4a7c59, #6ba16a);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-form,
+            .contact-info {
+                padding: 2rem;
+            }
+        }
+
+        /* Instagram Feed Styles */
+        .instagram-feed {
+            background: white;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .instagram-feed h3 {
+            text-align: center;
+            color: #2d5a37;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .instagram-post {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .instagram-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .instagram-post img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .instagram-post-content {
+            padding: 1rem;
+        }
+
+        .instagram-post-caption {
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .instagram-post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .instagram-post-date {
+            color: #999;
+        }
+
+        .instagram-post-link {
+            color: #6ba16a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .instagram-post-link:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        .instagram-error {
+            text-align: center;
+            padding: 2rem;
+            color: #e74c3c;
+            background: #fdf2f2;
+            border-radius: 8px;
+            margin: 1rem 20px;
+        }
+
+        .instagram-refresh-btn {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .instagram-refresh-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 148, 51, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .instagram-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            
+            .instagram-post img {
+                height: 200px;
+            }
         }
 
         footer {
@@ -783,6 +1189,10 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+        }
+
+        .event-card .object-position-top {
+            object-position: center 35%;
         }
 
         .event-info {
@@ -862,7 +1272,6 @@
 
         /* Lightbox Modal for Gallery */
         .lightbox-modal {
-            display: none;
             position: fixed;
             z-index: 2000;
             left: 0;
@@ -870,32 +1279,78 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.9);
+            display: flex;
             justify-content: center;
             align-items: center;
-            animation: fadeIn 0.3s;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .lightbox-modal.show {
+            visibility: visible;
+            opacity: 1;
         }
 
         .lightbox-content {
             max-width: 90vw;
             max-height: 90vh;
-            animation: slideIn 0.3s;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: slideIn 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+            margin: auto;
+            display: block !important;
+            text-align: center;
+        }
+
+        .lightbox-modal .lightbox-content {
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
+            transform: none;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .lightbox-close {
             position: absolute;
             top: 20px;
-            right: 35px;
+            right: 30px;
             color: #f1f1f1;
             font-size: 40px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             cursor: pointer;
+            z-index: 2001;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
         }
 
         .lightbox-close:hover,
         .lightbox-close:focus {
-            color: #bbb;
-            text-decoration: none;
+            color: #fff;
+            background: rgba(0,0,0,0.8);
+            transform: scale(1.1);
         }
 
         /* Modal Styles */
@@ -953,8 +1408,14 @@
         }
 
         @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .close-button {
@@ -1236,6 +1697,16 @@
         </div>
     </nav>
 
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs" id="breadcrumbs" style="display: none;">
+        <nav>
+            <ol>
+                <li><a href="#inicio">Inicio</a></li>
+                <li class="current" id="currentPage">Página Actual</li>
+            </ol>
+        </nav>
+    </div>
+
     <section class="hero-section" id="inicio">
         <div class="hero-carousel">
             <div class="hero-slide active">
@@ -1483,7 +1954,7 @@
                               images-optimized/ecomanualidades/foto3-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto3-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto3-800w.jpeg"
-                           alt=""
+                           alt="Manualidades creativas con materiales reciclados 🌿"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1517,7 +1988,7 @@
                               images-optimized/ecomanualidades/foto5-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto5-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto5-800w.jpeg"
-                           alt=""
+                           alt="Artesanías sostenibles con materiales de reciclaje ♻️"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1534,7 +2005,7 @@
                               images-optimized/ecomanualidades/foto6-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto6-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto6-800w.jpeg"
-                           alt=""
+                           alt="Creaciones artesanales con conciencia ambiental 🌱"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1585,7 +2056,7 @@
                               images-optimized/ecomanualidades/foto9-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto9-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto9-800w.jpeg"
-                           alt=""
+                           alt="Trabajo artesanal comunitario con materiales reciclados 🎨"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1602,7 +2073,7 @@
                               images-optimized/ecomanualidades/foto10-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto10-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto10-800w.jpeg"
-                           alt=""
+                           alt="Innovación artesanal con materiales sostenibles 🌿"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1619,7 +2090,7 @@
                               images-optimized/ecomanualidades/foto11-800w.jpeg 800w,
                               images-optimized/ecomanualidades/foto11-1200w.jpeg 1200w">
                       <img src="images-optimized/ecomanualidades/foto11-800w.jpeg"
-                           alt=""
+                           alt="Artesanías comunitarias con impacto social positivo ✨"
                            loading="lazy"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
@@ -1824,6 +2295,7 @@
                       <img src="images-optimized/eventos/foto1-800w.jpeg"
                            alt="Feria de Emprendimiento Local"
                            loading="lazy"
+                           class="object-position-top"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
                     <div class="event-info">
@@ -1869,6 +2341,7 @@
                       <img src="images-optimized/eventos/foto6-800w.jpeg"
                            alt="Diplomado Universidad Javeriana"
                            loading="lazy"
+                           class="object-position-top"
                            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
                     </picture>
                     <div class="event-info">
@@ -1983,22 +2456,7 @@
         </section>
 
         <section class="section social-section" style="text-align: center;" id="contacto">
-            <div class="social-background">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images-optimized/bg-400w.webp 400w,
-                          images-optimized/bg-800w.webp 800w,
-                          images-optimized/bg-1200w.webp 1200w">
-                  <source type="image/jpeg"
-                          srcset="images-optimized/bg-400w.jpeg 400w,
-                          images-optimized/bg-800w.jpeg 800w,
-                          images-optimized/bg-1200w.jpeg 1200w">
-                  <img src="images-optimized/bg-800w.jpeg"
-                       alt="Background"
-                       loading="lazy"
-                       sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px">
-                </picture>
-            </div>
+            <div class="social-background"></div>
             <div class="social-overlay"></div>
             <div class="social-particles">
                 <div class="particle"></div>
@@ -2009,7 +2467,7 @@
             </div>
             <div class="container">
                 <div class="social-content">
-                    <h2>Síguenos en Nuestras Redes</h2>
+                    <h2>Conecta con Nuestra Comunidad</h2>
                     <div class="instagram-container">
                         <picture>
                           <source type="image/webp"
@@ -2024,12 +2482,101 @@
                                alt="Perfil de Instagram de Artesanas Loma de Luisa"
                                loading="lazy"
                                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
-                               style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+                               style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                         </picture>
-                        <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);">Mantente conectado con nuestras actividades diarias, conoce más sobre nuestros proyectos y descubre cómo puedes ser parte de esta hermosa iniciativa comunitaria.</p>
+                        <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.95); font-size: 1.1rem; line-height: 1.6;">Mantente conectado con nuestras actividades diarias, conoce más sobre nuestros proyectos y descubre cómo puedes ser parte de esta hermosa iniciativa comunitaria que transforma vidas y construye futuro.</p>
                         <a href="https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/?img_index=1&igsh=MXRxenU2bnJydThpMQ==" target="_blank" class="instagram-link">
                             📸 Síguenos en Instagram @artesanaslomadeluisa
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed Section -->
+        <div class="instagram-feed">
+            <div class="container">
+                <h3>📱 Últimas Publicaciones en Instagram</h3>
+                <div id="instagramGrid" class="instagram-grid">
+                    <div class="instagram-loading">
+                        <p>🔄 Cargando publicaciones de Instagram...</p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <button class="instagram-refresh-btn" id="refreshInstagram" style="display: none;">
+                        🔄 Actualizar Feed
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <section class="section contact-form-section" id="contacto-form">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.1rem;">¿Tienes preguntas o quieres colaborar con nosotros? ¡Nos encantaría saber de ti!</p>
+                
+                <div class="contact-form-container">
+                    <!-- Formspree Alternative (uncomment to use instead of EmailJS) -->
+                    <!-- <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> -->
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="colaboracion">Quiero colaborar</option>
+                                <option value="informacion">Solicito información</option>
+                                <option value="donacion">Quiero hacer una donación</option>
+                                <option value="voluntariado">Quiero ser voluntario/a</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="btn-loading" style="display: none;">Enviando...</span>
+                        </button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <strong>📍 Ubicación:</strong>
+                            <p>Vereda Loma de Luisa, Colombia</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong>
+                            <p>artesanaslomalimpia@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 WhatsApp:</strong>
+                            <p>+57 316 6747463</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>🕒 Horarios:</strong>
+                            <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2041,6 +2588,11 @@
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        ↑
+    </button>
 
     <!-- Modals -->
     <div id="modal-refuerzo" class="modal">
@@ -2566,7 +3118,10 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Catálogo de Ecomanualidades</h2>
-            <embed src="pdf/postales.pdf" type="application/pdf" width="100%" height="600px" />
+            <div class="pdf-loading-container">
+                <embed id="pdf-catalogo" src="pdf/postales.pdf" type="application/pdf" width="100%" height="600px" />
+                <div class="spinner"></div>
+            </div>
         </div>
     </div>
 
@@ -2732,20 +3287,362 @@
                 item.addEventListener('click', () => {
                     const imgSrc = item.querySelector('img').src;
                     lightboxImg.src = imgSrc;
-                    lightbox.style.display = 'flex';
+                    lightbox.classList.add('show');
                 });
             });
 
             function closeLightbox() {
-                lightbox.style.display = 'none';
+                lightbox.classList.remove('show');
             }
 
             lightboxClose.addEventListener('click', closeLightbox);
             lightbox.addEventListener('click', (event) => {
-                if (event.target === lightbox) {
+                // Close lightbox if the click is on the background or the close button itself
+                if (event.target === lightbox || event.target === lightboxClose) {
                     closeLightbox();
                 }
             });
+
+            // Back to Top functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Contact Form functionality with EmailJS
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+
+            /* 
+            ALTERNATIVAS PARA FORMULARIOS SIN BACKEND:
+            
+            1. 📧 EMAILJS (Implementado arriba) - RECOMENDADO
+               - Gratuito hasta 200 emails/mes
+               - Fácil configuración
+               - Soporte para Gmail, Outlook, etc.
+               - Pasos: https://www.emailjs.com/docs/
+               
+            2. 📱 FORMSPREE
+               - Gratuito hasta 50 submissions/mes
+               - Solo agregar action="https://formspree.io/f/YOUR_FORM_ID"
+               - Método: POST
+               
+            3. 📊 NETLIFY FORMS
+               - Si usas Netlify para hosting
+               - Solo agregar netlify al formulario
+               - Gratuito hasta 100 submissions/mes
+               
+            4. 🔗 WEB3FORMS
+               - Gratuito hasta 250 submissions/mes
+               - Similar a Formspree
+               
+            5. 📧 MAILTO (Básico)
+               - Solo agregar action="mailto:artesanaslomalimpia@gmail.com"
+               - Abre cliente de email del usuario
+               
+            CONFIGURACIÓN EMAILJS:
+            1. Crear cuenta en https://www.emailjs.com/
+            2. Crear servicio de email (Gmail recomendado)
+            3. Crear template de email
+            4. Obtener Public Key, Service ID y Template ID
+            5. Reemplazar los valores en el código
+            */
+
+            // Initialize EmailJS (replace with your public key)
+            emailjs.init('YOUR_PUBLIC_KEY'); // Get this from EmailJS dashboard
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline';
+                
+                try {
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const templateParams = {
+                        from_name: formData.get('name'),
+                        from_email: formData.get('email'),
+                        phone: formData.get('phone'),
+                        subject: formData.get('subject'),
+                        message: formData.get('message'),
+                        to_email: 'artesanaslomalimpia@gmail.com' // Your email
+                    };
+                    
+                    // Send email using EmailJS
+                    const response = await emailjs.send(
+                        'YOUR_SERVICE_ID',    // Replace with your service ID
+                        'YOUR_TEMPLATE_ID',   // Replace with your template ID
+                        templateParams
+                    );
+                    
+                    if (response.status === 200) {
+                        // Show success message
+                        showNotification('¡Mensaje enviado con éxito! Te contactaremos pronto.', 'success');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Error en el envío');
+                    }
+                    
+                } catch (error) {
+                    console.error('Error sending email:', error);
+                    showNotification('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                }
+            });
+
+            // Notification function
+            function showNotification(message, type) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 1rem 1.5rem;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: 600;
+                    z-index: 10000;
+                    max-width: 400px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease;
+                `;
+                
+                if (type === 'success') {
+                    notification.style.background = 'linear-gradient(135deg, #6ba16a, #4a7c59)';
+                } else {
+                    notification.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                }
+                
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                // Animate in
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 100);
+                
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 5000);
+            }
+
+            // Breadcrumbs functionality
+            const breadcrumbs = document.getElementById('breadcrumbs');
+            const currentPage = document.getElementById('currentPage');
+            
+            const sectionNames = {
+                'inicio': 'Inicio',
+                'nosotros': 'Nuestra Historia',
+                'refuerzo-escolar': 'Refuerzo Escolar',
+                'galeria': 'Ecomanualidades',
+                'eventos': 'Eventos',
+                'equipo': 'Nuestro Equipo',
+                'contacto': 'Contacto',
+                'contacto-form': 'Formulario de Contacto'
+            };
+
+            function updateBreadcrumbs() {
+                const sections = Object.keys(sectionNames);
+                let currentSection = 'inicio';
+                
+                for (const section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom > 100) {
+                            currentSection = section;
+                            break;
+                        }
+                    }
+                }
+                
+                if (currentSection !== 'inicio') {
+                    breadcrumbs.style.display = 'block';
+                    currentPage.textContent = sectionNames[currentSection];
+                } else {
+                    breadcrumbs.style.display = 'none';
+                }
+            }
+
+            window.addEventListener('scroll', updateBreadcrumbs);
+            updateBreadcrumbs(); // Initial call
+
+            // Instagram Feed functionality
+            const instagramGrid = document.getElementById('instagramGrid');
+            const refreshBtn = document.getElementById('refreshInstagram');
+            
+            /* 
+            INSTRUCCIONES PARA CONECTAR CON INSTAGRAM API REAL:
+            
+            1. Crear una aplicación en Facebook Developers:
+               https://developers.facebook.com/apps/
+            
+            2. Configurar Instagram Basic Display API
+            
+            3. Obtener Access Token de larga duración
+            
+            4. Reemplazar la función loadInstagramFeed() con:
+            
+            async function loadInstagramFeed() {
+                try {
+                    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=TU_ACCESS_TOKEN`);
+                    const data = await response.json();
+                    
+                    if (data.data) {
+                        const postsHTML = data.data.map(post => createInstagramPost({
+                            id: post.id,
+                            image: post.media_url,
+                            caption: post.caption || 'Sin descripción',
+                            permalink: post.permalink,
+                            timestamp: post.timestamp
+                        })).join('');
+                        
+                        instagramGrid.innerHTML = postsHTML;
+                        refreshBtn.style.display = 'inline-block';
+                    }
+                } catch (error) {
+                    console.error('Error loading Instagram feed:', error);
+                    instagramGrid.innerHTML = `
+                        <div class="instagram-error">
+                            <p>❌ Error al cargar las publicaciones de Instagram</p>
+                            <p>Por favor, inténtalo de nuevo más tarde</p>
+                        </div>
+                    `;
+                }
+            }
+            */
+            
+            // Mock Instagram data (replace with real API call)
+            const mockInstagramPosts = [
+                {
+                    id: '1',
+                    image: 'images-optimized/ecomanualidades/foto1-800w.jpeg',
+                    caption: 'Cortinas con material reciclado 🏡 Decoración sostenible que transforma espacios y cuida el planeta. #EcoManualidades #Sostenibilidad #Reciclaje',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-15T10:30:00Z'
+                },
+                {
+                    id: '2',
+                    image: 'images-optimized/ecomanualidades/foto2-800w.jpeg',
+                    caption: 'Faroles con botellas PET ✨ Iluminación artesanal con conciencia ambiental. Cada farol cuenta una historia de transformación y cuidado del medio ambiente.',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-14T15:45:00Z'
+                },
+                {
+                    id: '3',
+                    image: 'images-optimized/ecomanualidades/foto4-800w.jpeg',
+                    caption: 'Materas con PET 🌱 Sembramos futuro en materas hechas con materiales reciclados. Cada planta que crece aquí representa esperanza y sostenibilidad.',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-13T09:20:00Z'
+                },
+                {
+                    id: '4',
+                    image: 'images-optimized/ecomanualidades/foto7-800w.jpeg',
+                    caption: 'Coronas con cartones de huevo ♻️ De material reciclado a símbolo de imaginación. La creatividad no tiene límites cuando se trata de cuidar nuestro planeta.',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-12T14:15:00Z'
+                },
+                {
+                    id: '5',
+                    image: 'images-optimized/ecomanualidades/foto8-800w.jpeg',
+                    caption: 'Canastas con tapas de botellas PET 🌱 De tapa en tapa construimos utilidad y conciencia ambiental. Cada pieza es única y cuenta nuestra historia.',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-11T11:30:00Z'
+                },
+                {
+                    id: '6',
+                    image: 'images-optimized/ecomanualidades/foto15-800w.jpeg',
+                    caption: 'Flores con tubos de cartón 🎨 Flores sostenibles que decoran con conciencia ambiental. La belleza puede ser ecológica y funcional.',
+                    permalink: 'https://www.instagram.com/p/DOwbMTKEe6rD7SD6My5qT8p2vtU2C-DUwKJvCI0/',
+                    timestamp: '2024-01-10T16:45:00Z'
+                }
+            ];
+
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                const now = new Date();
+                const diffTime = Math.abs(now - date);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                
+                if (diffDays === 1) return 'Hace 1 día';
+                if (diffDays < 7) return `Hace ${diffDays} días`;
+                if (diffDays < 30) return `Hace ${Math.ceil(diffDays / 7)} semanas`;
+                return date.toLocaleDateString('es-ES');
+            }
+
+            function createInstagramPost(post) {
+                return `
+                    <div class="instagram-post" onclick="window.open('${post.permalink}', '_blank')">
+                        <img src="${post.image}" alt="${post.caption.substring(0, 100)}..." loading="lazy">
+                        <div class="instagram-post-content">
+                            <div class="instagram-post-caption">${post.caption}</div>
+                            <div class="instagram-post-meta">
+                                <span class="instagram-post-date">${formatDate(post.timestamp)}</span>
+                                <a href="${post.permalink}" class="instagram-post-link" target="_blank">Ver en Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function loadInstagramFeed() {
+                instagramGrid.innerHTML = '<div class="instagram-loading"><p>🔄 Cargando publicaciones de Instagram...</p></div>';
+                
+                // Simulate API delay
+                setTimeout(() => {
+                    try {
+                        const postsHTML = mockInstagramPosts.map(createInstagramPost).join('');
+                        instagramGrid.innerHTML = postsHTML;
+                        refreshBtn.style.display = 'inline-block';
+                    } catch (error) {
+                        instagramGrid.innerHTML = `
+                            <div class="instagram-error">
+                                <p>❌ Error al cargar las publicaciones de Instagram</p>
+                                <p>Por favor, inténtalo de nuevo más tarde</p>
+                            </div>
+                        `;
+                        refreshBtn.style.display = 'inline-block';
+                    }
+                }, 1500);
+            }
+
+            // Load feed on page load
+            loadInstagramFeed();
+
+            // Refresh button functionality
+            refreshBtn.addEventListener('click', () => {
+                loadInstagramFeed();
+            });
+
+            // Auto-refresh every 5 minutes
+            setInterval(loadInstagramFeed, 300000);
 
             // --- Global Image Loader ---
             const createImageWrapper = (img) => {
@@ -2808,6 +3705,32 @@
             });
 
             observer.observe(document.body, { childList: true, subtree: true });
+
+            // PDF loading spinner for modal-ecomanualidades
+            const pdfCatalogo = document.getElementById('pdf-catalogo');
+            const pdfSpinner = pdfCatalogo.nextElementSibling; // The spinner is the next sibling
+
+            if (pdfCatalogo && pdfSpinner) {
+                // Hide spinner when PDF is loaded
+                pdfCatalogo.addEventListener('load', () => {
+                    pdfSpinner.classList.add('hidden');
+                });
+
+                // Show spinner when modal is opened (before PDF might reload or if it's not loaded yet)
+                const modalEcomanualidades = document.getElementById('modal-ecomanualidades');
+                if (modalEcomanualidades) {
+                    modalEcomanualidades.addEventListener('click', (event) => {
+                        // Only show spinner if the modal itself is clicked to open it, not internal clicks
+                        if (event.target === modalEcomanualidades) {
+                            pdfSpinner.classList.remove('hidden');
+                            // If PDF is already loaded, hide spinner immediately
+                            if (pdfCatalogo.complete || (pdfCatalogo.readyState >= 3 && pdfCatalogo.readyState !== 4)) { // Check for interactive or complete state
+                                pdfSpinner.classList.add('hidden');
+                            }
+                        }
+                    });
+                }
+            }
         });
     </script>
 </body>
